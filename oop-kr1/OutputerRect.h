@@ -6,10 +6,10 @@ class OutputerRect
 {
 private:
 	bool isOutputting = false;
-protected:
+protected: 
 	Rect rect;
 public:
-	OutputerRect(Rect& rect);
+	OutputerRect(Rect* rect);
 	virtual void output(HDC deviceContext)
 	{
 		if (! isOutputting) {

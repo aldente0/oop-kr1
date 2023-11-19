@@ -128,13 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="oop-kr1.cpp" />
+    <ClCompile Include="OutputerRandomEllipse.cpp" />
+    <ClCompile Include="OutputerRandomRect.cpp" />
     <ClCompile Include="OutputerRect.cpp" />
+    <ClCompile Include="RandomEllipse.cpp" />
     <ClCompile Include="RandomRect.cpp" />
     <ClCompile Include="Rect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
+    <ClInclude Include="OutputerRandomEllipse.h" />
+    <ClInclude Include="OutputerRandomRect.h" />
     <ClInclude Include="OutputerRect.h" />
+    <ClInclude Include="RandomEllipse.h" />
     <ClInclude Include="RandomRect.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="winLib.h" />

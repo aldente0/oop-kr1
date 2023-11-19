@@ -1,5 +1,6 @@
 #pragma once
 #include "winLib.h"
+#include <wingdi.h>
 
 class Rect
 {

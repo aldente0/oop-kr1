@@ -9,14 +9,13 @@ int main()
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     HWND console_handle = GetConsoleWindow();
     HDC deviceContext = GetDC(console_handle);
-
     int fillstyle = 4;
     int color = RGB(200, 100, 200);
 
-    Rect rect(0, 0, 400, 400, color, fillstyle);
+    RandomRect* rect = new RandomRect(0, 0, 400, 400, color, fillstyle);
+    OutputerRandomEllipse* outputerRect = new OutputerRandomEllipse(rect);
 
     while (true) {
-        OutputerRect* outputerRect = new OutputerRect(rect);
         outputerRect->output(deviceContext);
         Sleep(1000);
         outputerRect->output(deviceContext);
