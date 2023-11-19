@@ -19,7 +19,7 @@ int main()
         OutputerRect* outputerRect = new OutputerRect(rect);
         outputerRect->output(deviceContext);
         Sleep(1000);
-        outputerRect->hide(deviceContext, console_handle);
+        outputerRect->output(deviceContext);
         Sleep(1000);
     }
 }

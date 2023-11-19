@@ -6,7 +6,9 @@ void RandomRect::changeAll()
 	rect.right = rand() % (maxSize - minSize + 1) + minSize;
 	rect.bottom = rand() % (maxSize - minSize + 1) + minSize;
 	
-	color = RGB(rand() % (endColor - startColor + 1) + startColor,
+	color = RGB(
 		rand() % (endColor - startColor + 1) + startColor,
-		rand() % (endColor - startColor + 1) + startColor);
+		rand() % (endColor - startColor + 1) + startColor,
+		rand() % (endColor - startColor + 1) + startColor
+	);
 }

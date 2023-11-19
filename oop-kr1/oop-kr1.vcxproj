@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="oop-kr1.cpp" />
     <ClCompile Include="OutputerRect.cpp" />
+    <ClCompile Include="RandomRect.cpp" />
     <ClCompile Include="Rect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="OutputerRect.h" />
+    <ClInclude Include="RandomRect.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="winLib.h" />
   </ItemGroup>

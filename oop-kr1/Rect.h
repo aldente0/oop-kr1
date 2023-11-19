@@ -8,7 +8,6 @@ protected:
 	RECT rect;
 public:
 	Rect(int left, int top, int right, int bottom, int color, int fillStyle);
-
 	RECT getRect();
 	int getColor();
 	int getFillStyle();
