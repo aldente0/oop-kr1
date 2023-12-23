@@ -10,7 +10,6 @@ public:
 
 	void output(HDC deviceContext) override
 	{
-		system("cls");
 		randomRect.changeAll();
 		RECT r = randomRect.getRect();
 		HBRUSH brush = CreateSolidBrush(randomRect.getColor());

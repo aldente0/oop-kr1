@@ -11,12 +11,15 @@ int main()
     HDC deviceContext = GetDC(console_handle);
     int fillstyle = 4;
     int color = RGB(200, 100, 200);
-
+    
     RandomRect* rect = new RandomRect(0, 0, 400, 400, color, fillstyle);
-    OutputerRandomEllipse* outputerRect = new OutputerRandomEllipse(rect);
-
+    RandomRect* ellipse = new RandomRect(500, 0, 900, 400, color, fillstyle);
+    OutputerRandomRect* outputerRect = new OutputerRandomRect(rect);
+    OutputerRandomEllipse* outputerEllipse = new OutputerRandomEllipse(ellipse);
     while (true) {
+        system("cls");
         outputerRect->output(deviceContext);
+        outputerEllipse->output(deviceContext);
         Sleep(1000);
     }
 }

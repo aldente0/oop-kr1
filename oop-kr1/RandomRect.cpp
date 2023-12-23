@@ -2,9 +2,9 @@
 
 void RandomRect::changeAll()
 {
-	int const minSize = 100, const maxSize = 400, const startColor = 0, const endColor = 255;
-	rect.right = rand() % (maxSize - minSize + 1) + minSize;
-	rect.bottom = rand() % (maxSize - minSize + 1) + minSize;
+	int const minRightSize = this->minLeft + 100, const minBottomSize = this->minTop + 100, const startColor = 0, const endColor = 255;
+	rect.right = rand() % (this->maxRight - minRightSize + 1) + minRightSize;
+	rect.bottom = rand() % (this->maxBottom - minBottomSize + 1) + minBottomSize;
 	
 	color = RGB(
 		rand() % (endColor - startColor + 1) + startColor,
