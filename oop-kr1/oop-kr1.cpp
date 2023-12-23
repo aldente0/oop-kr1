@@ -18,8 +18,6 @@ int main()
     while (true) {
         outputerRect->output(deviceContext);
         Sleep(1000);
-        outputerRect->output(deviceContext);
-        Sleep(1000);
     }
 }
 
