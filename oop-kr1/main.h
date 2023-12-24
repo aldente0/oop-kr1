@@ -5,3 +5,5 @@
 #include "OutputerRect.h"
 #include "OutputerRandomRect.h"
 #include "OutputerRandomEllipse.h"
+#include "Quadrant.h"
+#include "MyWindow.h"

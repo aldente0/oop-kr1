@@ -1,6 +1,6 @@
 #include "Rect.h"
 
-Rect::Rect(int left, int top, int right, int bottom, int color, int fillStyle) : color(color), fillStyle(fillStyle)
+Rect::Rect(int left, int top, int right, int bottom)
 {
 	rect = { left, top, right, bottom };
 }

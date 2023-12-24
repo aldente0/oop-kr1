@@ -8,8 +8,8 @@ private:
 	int minTop;
 	int minLeft;
 public:
-	RandomRect(int left, int top, int right, int bottom, int color, int fillStyle)
-		: Rect(left, top, right, bottom, color, fillStyle)
+	RandomRect(int left, int top, int right, int bottom)
+		: Rect(left, top, right, bottom)
 	{
 		this->maxBottom = bottom;
 		this->maxRight = right;
