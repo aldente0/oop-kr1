@@ -9,7 +9,7 @@ private:
 	OutputerRandomRect* outputer;
 	void getRandomOutputer();
 	void initRandomRect(int center);
-public: 
+public:
 	Quadrant(int quadrantNumber, int center) : quadrantNumber(quadrantNumber)
 	{
 		this->initRandomRect(center);
@@ -21,6 +21,11 @@ public:
 		this->initRandomRect(center);
 		this->getRandomOutputer();
 		this->outputer->output(deviceContext);
+	}
+
+	void hide(HDC deviceContext, int center)
+	{
+		this->outputer->hide(deviceContext);
 	}
 };
 

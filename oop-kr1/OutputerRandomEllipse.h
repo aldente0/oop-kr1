@@ -16,5 +16,14 @@ public:
 		Ellipse(deviceContext, r.left, r.top, r.right, r.bottom);
 		DeleteObject(brush);
     }
+
+	void hide(HDC deviceContext)
+	{
+		RECT r = randomRect.getRect();
+		HBRUSH brush = CreateSolidBrush(0);
+		SelectObject(deviceContext, brush);
+		Ellipse(deviceContext, r.left, r.top, r.right, r.bottom);
+		DeleteObject(brush);
+	}
 };
 

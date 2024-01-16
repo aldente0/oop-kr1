@@ -6,11 +6,13 @@ int main()
 {
     system("cls");
 
-    MyWindow* window = new MyWindow();
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    HWND console_handle = GetConsoleWindow();
+    HDC deviceContext = GetDC(console_handle);
+
+    MyWindow* window = new MyWindow(deviceContext);
     
-    while (true) {
-        window->outputWindow();
-    }
+    window->output();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -26,26 +26,26 @@ void Quadrant::initRandomRect(int center)
     switch (this->quadrantNumber)
     {
     case 1:
-        left = center + 100;
+        left = center + 50;
         top = 0;
         right = center + center;
-        bottom = center + 100;
+        bottom = center + 50;
         break;
     case 2: 
         left = 0;
         top = 0;
-        right = center - 100;
-        bottom = center - 100;
+        right = center - 50;
+        bottom = center - 50;
         break;
     case 3:
         left = 0;
-        top = center + 100;
-        right = center - 100;
+        top = center + 50;
+        right = center - 50;
         bottom = center + center;
         break;
     case 4:
-        left = center + 100;
-        top = center + 100;
+        left = center + 50;
+        top = center + 50;
         right = center + center;
         bottom = center + center;
         break;
