@@ -8,22 +8,20 @@ private:
 	RandomRect* rect;
 	OutputerRandomRect* outputer;
 	void getRandomOutputer();
-	void initRandomRect(int center);
+	void initRandomRect(int center, int distanceFromCenter);
 public:
-	Quadrant(int quadrantNumber, int center) : quadrantNumber(quadrantNumber)
+	Quadrant(int quadrantNumber, int center, int distanceFromCenter) : quadrantNumber(quadrantNumber)
 	{
-		this->initRandomRect(center);
+		this->initRandomRect(center, distanceFromCenter);
 		this->getRandomOutputer();
 	};
 
-	void outputQuadrant(HDC deviceContext, int center)
+	void outputQuadrant(HDC deviceContext)
 	{
-		this->initRandomRect(center);
-		this->getRandomOutputer();
 		this->outputer->output(deviceContext);
 	}
 
-	void hide(HDC deviceContext, int center)
+	void hide(HDC deviceContext)
 	{
 		this->outputer->hide(deviceContext);
 	}
