@@ -11,11 +11,9 @@ private:
 	void getRandomOutputer();
 	void initRandomRect(int center, int distanceFromCenter);
 public:
-	Quadrant(int quadrantNumber, int center, int penWidth) : quadrantNumber(quadrantNumber)
+	Quadrant(int quadrantNumber, int penWidth) : quadrantNumber(quadrantNumber)
 	{
 		this->distanceFromCenter = floor(penWidth / 2);
-		this->initRandomRect(center, this->distanceFromCenter);
-		this->getRandomOutputer();
 	};
 
 	void outputQuadrant(HDC deviceContext, int center)
