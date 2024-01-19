@@ -4,7 +4,7 @@ class MyWindow
 {
 private:
 	int penWidth = 4;
-	int bgColor = RGB(0, 0, 0);
+	int bgColor = RGB(200, 100, 0);
 	int center = 500;
 	Quadrant* quadrants[4];
 	void initQuadrants();
@@ -21,12 +21,12 @@ public:
 		while (true) {
 			for (int i = 0; i < 4; i++) {
 				Quadrant* quadrant = this->quadrants[i];
-				quadrant->outputQuadrant(deviceContext);
+				quadrant->outputQuadrant(deviceContext, this->center);
 			}
 			Sleep(1000);
 			for (int i = 0; i < 4; i++) {
 				Quadrant* quadrant = this->quadrants[i];
-				quadrant->hide(deviceContext);
+				quadrant->hide(deviceContext, this->bgColor);
 			}
 			Sleep(200);
 		}

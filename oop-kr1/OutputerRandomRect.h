@@ -17,10 +17,10 @@ public:
 		DeleteObject(brush);
 	}
 
-	void hide(HDC deviceContext)
+	void hide(HDC deviceContext, int backgroundColor)
 	{
 		RECT r = randomRect.getRect();
-		HBRUSH brush = CreateSolidBrush(0);
+		HBRUSH brush = CreateSolidBrush(backgroundColor);
 		FillRect(deviceContext, &r, brush);
 		DeleteObject(brush);
 	}

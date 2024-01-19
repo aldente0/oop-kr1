@@ -4,26 +4,30 @@
 class Quadrant
 {
 private:
+	int distanceFromCenter;
 	int quadrantNumber;
 	RandomRect* rect;
 	OutputerRandomRect* outputer;
 	void getRandomOutputer();
 	void initRandomRect(int center, int distanceFromCenter);
 public:
-	Quadrant(int quadrantNumber, int center, int distanceFromCenter) : quadrantNumber(quadrantNumber)
+	Quadrant(int quadrantNumber, int center, int penWidth) : quadrantNumber(quadrantNumber)
 	{
-		this->initRandomRect(center, distanceFromCenter);
+		this->distanceFromCenter = floor(penWidth / 2);
+		this->initRandomRect(center, this->distanceFromCenter);
 		this->getRandomOutputer();
 	};
 
-	void outputQuadrant(HDC deviceContext)
+	void outputQuadrant(HDC deviceContext, int center)
 	{
+		this->initRandomRect(center, this->distanceFromCenter);
+		this->getRandomOutputer();
 		this->outputer->output(deviceContext);
 	}
 
-	void hide(HDC deviceContext)
+	void hide(HDC deviceContext, int backgroundColor)
 	{
-		this->outputer->hide(deviceContext);
+		this->outputer->hide(deviceContext, backgroundColor);
 	}
 };
 
