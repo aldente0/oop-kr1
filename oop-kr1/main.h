@@ -2,8 +2,5 @@
 #include "winLib.h"
 #include "Rect.h"
 #include "RandomRect.h"
-#include "OutputerRect.h"
-#include "OutputerRandomRect.h"
-#include "OutputerRandomEllipse.h"
 #include "Quadrant.h"
 #include "MyWindow.h"

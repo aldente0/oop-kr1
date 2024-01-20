@@ -129,9 +129,6 @@
   <ItemGroup>
     <ClCompile Include="MyWindow.cpp" />
     <ClCompile Include="oop-kr1.cpp" />
-    <ClCompile Include="OutputerRandomEllipse.cpp" />
-    <ClCompile Include="OutputerRandomRect.cpp" />
-    <ClCompile Include="OutputerRect.cpp" />
     <ClCompile Include="Quadrant.cpp" />
     <ClCompile Include="RandomEllipse.cpp" />
     <ClCompile Include="RandomRect.cpp" />
@@ -140,9 +137,6 @@
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="MyWindow.h" />
-    <ClInclude Include="OutputerRandomEllipse.h" />
-    <ClInclude Include="OutputerRandomRect.h" />
-    <ClInclude Include="OutputerRect.h" />
     <ClInclude Include="Quadrant.h" />
     <ClInclude Include="RandomEllipse.h" />
     <ClInclude Include="RandomRect.h" />

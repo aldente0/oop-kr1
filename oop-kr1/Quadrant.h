@@ -1,31 +1,31 @@
 #pragma once
 #include "RandomRect.h"
-#include "OutputerRandomRect.h"
+#include "RandomEllipse.h"
+
 class Quadrant
 {
 private:
+	POINT center;
 	int distanceFromCenter;
 	int quadrantNumber;
 	RandomRect* rect;
-	OutputerRandomRect* outputer;
-	void getRandomOutputer();
 	void initRandomRect(int center, int distanceFromCenter);
 public:
-	Quadrant(int quadrantNumber, int penWidth) : quadrantNumber(quadrantNumber)
+	Quadrant(int quadrantNumber, int penWidth, int center) : quadrantNumber(quadrantNumber)
 	{
 		this->distanceFromCenter = floor(penWidth / 2);
+		this->initRandomRect(center, this->distanceFromCenter);
 	};
 
-	void outputQuadrant(HDC deviceContext, int center)
+	void outputQuadrant(HDC deviceContext)
 	{
-		this->initRandomRect(center, this->distanceFromCenter);
-		this->getRandomOutputer();
-		this->outputer->output(deviceContext);
+		rect->changeAll(this->center);
+		this->rect->output(deviceContext);
 	}
 
 	void hide(HDC deviceContext, int backgroundColor)
 	{
-		this->outputer->hide(deviceContext, backgroundColor);
+		this->rect->hide(deviceContext, backgroundColor);
 	}
 };
 

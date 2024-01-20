@@ -1,18 +1,21 @@
 ﻿// oop-kr1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 #include "main.h";
+#include <time.h>
 
 int main()
 {
     system("cls");
+    srand(time(nullptr));
 
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     HWND console_handle = GetConsoleWindow();
     HDC deviceContext = GetDC(console_handle);
 
-    MyWindow* window = new MyWindow(deviceContext);
+    int bgColor = RGB(23, 200, 20);
+    MyWindow* window = new MyWindow(300, bgColor);
     
-    window->output();
+    window->output(deviceContext);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
